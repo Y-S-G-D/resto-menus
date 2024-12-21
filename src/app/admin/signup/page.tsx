@@ -5,6 +5,7 @@ import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Image from "next/image";
 import Link from "next/link";
+import OctagonPattern from "@/components/octagon-patterns";
 
 const defaultImageUrl = "https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-restaurant-logo-png-image_6136204.png"; // Path to the default image in your public folder
 
@@ -56,10 +57,10 @@ const HomePage: React.FC = () => {
     }, 1500);
   };
 
-  const handleSuccessClose = () => {
-    setIsSaved(false);
-    methods.reset();
-  };
+  // const handleSuccessClose = () => {
+  //   setIsSaved(false);
+  //   methods.reset();
+  // };
 
   const outletTypeOptions = [
     { value: "restaurant", label: "Restaurant" },
@@ -69,11 +70,13 @@ const HomePage: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col md:flex-row bg-gray-100">
       {/* Left Section - Text Content with Diagonal Split Background */}
-      <div className="flex-col justify-center w-1/2 bg-gradient-to-br from-pink-500 to-yellow-400 text-white p-8 hidden md:block">
-        <div className="max-w-md mx-auto">
+      <div className="relative flex-col justify-center w-1/2  p-8 hidden md:block">
+        <OctagonPattern/>
+
+        <div className=" max-w-md mx-auto">
           <div className="flex items-center space-x-2">
             <div className="w-6 h-6 bg-red-600 rounded-full"></div>
-            <h2 className="text-lg font-semibold text-gray-800">LET'S CAFE</h2>
+            <h2 className="text-lg font-semibold text-gray-800">LET&apos;S CAFE</h2>
           </div>
           <h2 className="text-5xl font-bold uppercase mt-2 text-red-600">
             Food
@@ -91,6 +94,7 @@ const HomePage: React.FC = () => {
           </Link>
         </div>
       </div>
+      )
 
       {/* Right Section - Signup Form */}
       <div className="flex items-center justify-center md:w-1/2 bg-white">

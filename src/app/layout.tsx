@@ -1,12 +1,15 @@
-import { Philosopher } from "next/font/google";
+import { Open_Sans,Syne } from "next/font/google";
 import "./globals.css";
-import ClientNavbar from './Component/Navbar/ClientNavbar';
 import { Toaster } from 'react-hot-toast';
 
-const philosopher = Philosopher({
+const open_Sans = Open_Sans({
   subsets: ['latin'],
-  weight: ['400', '700'],
 });
+
+const syne = Syne({
+  subsets: ['latin'],
+  variable: '--font-syne',
+})
 
 export default function RootLayout({
   children,
@@ -16,10 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${philosopher.className} `}
+        className={`${open_Sans.className} ${syne.variable} antialiased `}
       >
         <Toaster />
-        <ClientNavbar/>
         {children}
       </body>
     </html>

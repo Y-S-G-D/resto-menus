@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import FoodImage from '../assets/food-image.jpg'
+import FoodImage from '../../assets/food-image.jpg';
 
 const ImageHeader = ({title,subtitle}:{title:string,subtitle:string}) => {
     return (

@@ -78,7 +78,7 @@ const SignInPage: React.FC = () => {
                 <div className="max-w-md mx-auto">
                     <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 bg-red-600 rounded-full"></div>
-                        <h2 className="text-lg font-semibold text-gray-800">LET'S CAFE</h2>
+                        <h2 className="text-lg font-semibold text-gray-800">LET&apos;S CAFE</h2>
                     </div>
                     <h2 className="text-5xl font-bold uppercase mt-2 text-red-600">
                         Food
@@ -129,7 +129,6 @@ const SignInPage: React.FC = () => {
                             {/* Email Field */}
                             <label className="block mb-2 text-sm font-medium">Email</label>
                             <input
-                                name="email"
                                 type="email"
                                 placeholder="Enter your email"
                                 className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
@@ -158,7 +157,6 @@ const SignInPage: React.FC = () => {
                                         </button>
                                     </div>
                                     <input
-                                        name="otp"
                                         type="text"
                                         placeholder="Enter OTP"
                                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
@@ -172,7 +170,6 @@ const SignInPage: React.FC = () => {
                                         Password
                                     </label>
                                     <input
-                                        name="password"
                                         type="password"
                                         placeholder="Enter your password"
                                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"

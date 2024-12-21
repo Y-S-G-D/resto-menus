@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import FoodImage from "../assets/food-image.jpg";
+import FoodImage from "../../assets/food-image.jpg";
 import { FaChevronDown, FaChevronUp, FaStar } from "react-icons/fa";
 import { IItem } from "../models/Item";
 import { useBucketStore } from "../stores/bucketStore";

@@ -1,37 +1,43 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Container from "./Component/Container";
-import ImageHeader from "./Component/ImageHeader";
 import { motion } from "framer-motion";
-import MenusGrid from "./Component/MenusGrid";
-import {useBrowseMenuStore} from "@/app/stores/BrowseMenuStore"
-import Loader from '@/app/Component/Loader';
+// import MenusGrid from "./Component/MenusGrid";
+// import {useBrowseMenuStore} from "@/app/stores/BrowseMenuStore"
+// import Loader from '@/app/Component/Loader';
+import UsersNavbar from "@/components/users-navbar";
+import BottomNavigationBar from "@/components/bottom-navigation-bar";
+import HeroSection from "@/components/homepage/hero-section";
+import BrowseMenuSection from "@/components/homepage/browse-menu-section";
 
 const Home = () => {
-  const { isFetching,  browseMenus,getCategorizedMenu } = useBrowseMenuStore();
-  const [hasEffectRun, setHasEffectRun] = useState(false);
+  // const { isFetching,  browseMenus,getCategorizedMenu } = useBrowseMenuStore();
+  // const [hasEffectRun, setHasEffectRun] = useState(false);
 
 
-  useEffect(() => {
-    if (!hasEffectRun) {
-      setHasEffectRun(true);
-      getCategorizedMenu()
-    }
-    // return function (){
-    //   console.log("Clean up called")
-    // }
-  },[hasEffectRun,getCategorizedMenu]);
+  // useEffect(() => {
+  //   if (!hasEffectRun) {
+  //     setHasEffectRun(true);
+  //     getCategorizedMenu()
+  //   }
+  //   // return function (){
+  //   //   console.log("Clean up called")
+  //   // }
+  // },[hasEffectRun,getCategorizedMenu]);
 
-  if (isFetching) {
-    return <Loader/>
-  }
+  // if (isFetching) {
+  //   return <Loader/>
+  // }
 
 
   return (
     <div>
-      <ImageHeader
+      <UsersNavbar/>
+      <BottomNavigationBar/>
+      <HeroSection/>
+      {/* <ImageHeader
         title="Menus"
-        subtitle="Discover our seasonal menus that delight your taste buds!"/>
+        subtitle="Discover our seasonal menus that delight your taste buds!"/> */}
       <Container>
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -39,9 +45,11 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="my-8"
         >
-          <MenusGrid  browseMenus={browseMenus}/>
+          <BrowseMenuSection/>
+          {/* <MenusGrid  browseMenus={browseMenus}/> */}
         </motion.div>
       </Container>
+      
     </div>
   );
 };

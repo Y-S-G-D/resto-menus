@@ -4,11 +4,12 @@
 
 
 body {
-  @apply bg-surface text-onSurface;
+  @apply bg-primary/10;
 }
+  
 
 
-@layer base {
+/* @layer base {
   :root {
 
 
@@ -170,4 +171,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
